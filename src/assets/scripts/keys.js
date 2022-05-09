@@ -231,16 +231,16 @@ const keys = [
     event: 'true',
     type: 'service',
     ru: {
-      lowercase: 'Backspace',
-      uppercase: 'Backspace',
-      capsLower: 'Backspace',
-      capsUpper: 'Backspace'
+      lowercase: '',
+      uppercase: '',
+      capsLower: '',
+      capsUpper: ''
     },
     en: {
-      lowercase: 'Backspace',
-      uppercase: 'Backspace',
-      capsLower: 'Backspace',
-      capsUpper: 'Backspace'
+      lowercase: '',
+      uppercase: '',
+      capsLower: '',
+      capsUpper: ''
     }
   },
   {
@@ -909,18 +909,18 @@ const keys = [
   {
     key: 'ArrowUp',
     event: 'true',
-    type: 'service',
+    type: 'nav',
     ru: {
-      lowercase: 'ArrowUp',
-      uppercase: 'ArrowUp',
-      capsLower: 'ArrowUp',
-      capsUpper: 'ArrowUp'
+      lowercase: '',
+      uppercase: '',
+      capsLower: '',
+      capsUpper: ''
     },
     en: {
-      lowercase: 'ArrowUp',
-      uppercase: 'ArrowUp',
-      capsLower: 'ArrowUp',
-      capsUpper: 'ArrowUp'
+      lowercase: '',
+      uppercase: '',
+      capsLower: '',
+      capsUpper: ''
     }
   },
   {
@@ -993,19 +993,19 @@ const keys = [
   },
   {
     key: 'Space',
-    event: 'true',
-    type: 'service',
+    event: 'false',
+    type: 'input',
     ru: {
-      lowercase: '',
-      uppercase: '',
-      capsLower: '',
-      capsUpper: ''
+      lowercase: ' ',
+      uppercase: ' ',
+      capsLower: ' ',
+      capsUpper: ' '
     },
     en: {
-      lowercase: '',
-      uppercase: '',
-      capsLower: '',
-      capsUpper: ''
+      lowercase: ' ',
+      uppercase: ' ',
+      capsLower: ' ',
+      capsUpper: ' '
     }
   },
   {
@@ -1026,6 +1026,57 @@ const keys = [
     }
   },
   {
+    key: 'ArrowLeft',
+    event: 'true',
+    type: 'nav',
+    ru: {
+      lowercase: '',
+      uppercase: '',
+      capsLower: '',
+      capsUpper: ''
+    },
+    en: {
+      lowercase: '',
+      uppercase: '',
+      capsLower: '',
+      capsUpper: ''
+    }
+  },
+  {
+    key: 'ArrowDown',
+    event: 'true',
+    type: 'nav',
+    ru: {
+      lowercase: '',
+      uppercase: '',
+      capsLower: '',
+      capsUpper: ''
+    },
+    en: {
+      lowercase: '',
+      uppercase: '',
+      capsLower: '',
+      capsUpper: ''
+    }
+  },
+  {
+    key: 'ArrowRight',
+    event: 'true',
+    type: 'nav',
+    ru: {
+      lowercase: '',
+      uppercase: '',
+      capsLower: '',
+      capsUpper: ''
+    },
+    en: {
+      lowercase: '',
+      uppercase: '',
+      capsLower: '',
+      capsUpper: ''
+    }
+  },
+  {
     key: 'ControlRight',
     event: 'true',
     type: 'service',
@@ -1041,60 +1092,7 @@ const keys = [
       capsLower: 'Ctrl',
       capsUpper: 'Ctrl'
     }
-  },
-  {
-    key: 'ArrowLeft',
-    event: 'true',
-    type: 'service',
-    ru: {
-      lowercase: 'ArrowLeft',
-      uppercase: 'ArrowLeft',
-      capsLower: 'ArrowLeft',
-      capsUpper: 'ArrowLeft'
-    },
-    en: {
-      lowercase: 'ArrowLeft',
-      uppercase: 'ArrowLeft',
-      capsLower: 'ArrowLeft',
-      capsUpper: 'ArrowLeft'
-    }
-  },
-  {
-    key: 'ArrowDown',
-    event: 'true',
-    type: 'service',
-    ru: {
-      lowercase: 'ArrowDown',
-      uppercase: 'ArrowDown',
-      capsLower: 'ArrowDown',
-      capsUpper: 'ArrowDown'
-    },
-    en: {
-      lowercase: 'ArrowDown',
-      uppercase: 'ArrowDown',
-      capsLower: 'ArrowDown',
-      capsUpper: 'ArrowDown'
-    }
-  },
-  {
-    key: 'ArrowRight',
-    event: 'true',
-    type: 'service',
-    ru: {
-      lowercase: 'ArrowRight',
-      uppercase: 'ArrowRight',
-      capsLower: 'ArrowRight',
-      capsUpper: 'ArrowRight'
-    },
-    en: {
-      lowercase: 'ArrowRight',
-      uppercase: 'ArrowRight',
-      capsLower: 'ArrowRight',
-      capsUpper: 'ArrowRight'
-    }
   }
 ]
 
-export default {
-  keys
-}
+export default keys
