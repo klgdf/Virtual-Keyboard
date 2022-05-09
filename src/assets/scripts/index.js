@@ -36,7 +36,7 @@ description.innerHTML = 'Клавиатура создана в операцио
 // create keys
 let keysInner = ''
 keys.forEach(key => {
-  keysInner += `<div class="keyboard__key ${key.key}">
+  keysInner += `<div class="keyboard__key ${key.key}" data-keys="${key.key}">
     <div class="keyboard__lang ru hide">
       <span class="lowercase">${key.ru.lowercase}</span>
       <span class="uppercase hide">${key.ru.uppercase}</span>
@@ -76,23 +76,6 @@ const keyboardShortcuts = (f, ...keys) => {
   })
 }
 
-// switch language
-keyboardShortcuts(
-  () => {
-    const ruKeys = document.querySelectorAll('.ru')
-    const enKeys = document.querySelectorAll('.en')
-
-    for (let i = 0; i < ruKeys.length; i++) {
-      for (let j = 0; j < enKeys.length; j++) {
-        ruKeys[i].classList.toggle('hide')
-        enKeys[j].classList.toggle('hide')
-      }
-    }
-  },
-  'ShiftLeft',
-  'AltLeft'
-)
-
 // caps
 // backspace
 const backspaceKey = () => {
@@ -110,24 +93,44 @@ const activeKey = (item) => {
 const items = document.querySelectorAll('.keyboard__key')
 items.forEach(item => {
   // eventlistener for keyboard
-  keyboard.addEventListener('click', (e) => {
-    if (e.target === item) {
-      console.log(1)
+  item.addEventListener('click', (e) => {
+    if (e.currentTarget === item) {
       textarea.textContent += item.querySelector('.keyboard__lang.en > .lowercase').textContent
-      console.log(item.classList.contains('Backspace'))
       if (item.classList.contains('Backspace')) {
         backspaceKey()
       }
       activeKey(item)
     }
   })
-  document.addEventListener('keydown', (e) => {
-    if (e.key === item.dataset) {
-      console.log(2)
-      textarea.textContent += item.querySelector('.keyboard__lang.en > .lowercase').textContent
-      activeKey(item)
+})
+
+document.addEventListener('keydown', (e) => {
+  const item = document.querySelector(`.${e.code}`)
+  const dataAtr = item.dataset.keys
+
+  if (e.code === dataAtr) {
+    console.log(1)
+    textarea.textContent += item.querySelector('.keyboard__lang.en > .lowercase').textContent
+    activeKey(item)
+    if (dataAtr === 'AltLeft') {
+      // switch language
+      keyboardShortcuts(
+        () => {
+          const ruKeys = document.querySelectorAll('.ru')
+          const enKeys = document.querySelectorAll('.en')
+
+          for (let i = 0; i < ruKeys.length; i++) {
+            for (let j = 0; j < enKeys.length; j++) {
+              ruKeys[i].classList.remove('hide')
+              enKeys[j].classList.add('hide')
+            }
+          }
+        },
+        'AltLeft',
+        'ShiftLeft'
+      )
     }
-  })
+  }
 })
 
 document.addEventListener('DOMContentLoaded', () => {
