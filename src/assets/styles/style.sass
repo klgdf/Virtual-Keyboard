@@ -45,6 +45,12 @@
       background: #2ce4fd
     &:hover
       opacity: 0.9
+    &.Tab, &.Backspace, &.CapsLock, &.Enter, &.ShiftLeft, &.ShiftRight, &.Space
+      &.active
+        border-radius: 12px
+    &.AltRight, &.AltLeft
+      &::after
+        content: 'Alt'
     &.Tab
       width: 60px
       &::after
@@ -58,6 +64,8 @@
         content: 'Del'
     &.CapsLock
       width: 110px
+      &::after
+        content: 'Caps'
     &.Enter
       width: 120px
       &::after
