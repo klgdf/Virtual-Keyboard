@@ -6,6 +6,7 @@ import cookies from './cookies'
 
 const { setCookieC, getCookieC } = cookies
 
+console.log('По ошибке засабмитила ссылку на деплой. Вот ссылка на pull request: https://github.com/klgdf/Virtual-Keyboard/pull/1')
 // function create elements
 function createSomeElement (container, element, className, id) {
   const el = document.createElement(element)
@@ -183,6 +184,7 @@ if (getCookieC('registr') === '') {
   setCookieC('registr', 'false', 1)
   caps.classList.remove('active')
 } else {
+  // это работает, но eslint почему-то ругается
   registr = 'true'
   caps.classList.add('active')
 }
