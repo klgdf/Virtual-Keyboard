@@ -11,15 +11,11 @@ const keys = [
     type: 'input',
     ru: {
       lowercase: 'ё',
-      uppercase: 'Ё',
-      capsLower: 'Ё',
-      capsUpper: 'ё'
+      uppercase: 'Ё'
     },
     en: {
       lowercase: '`',
-      uppercase: '~',
-      capsLower: '`',
-      capsUpper: '~'
+      uppercase: '~'
     }
   },
   {
@@ -28,15 +24,11 @@ const keys = [
     type: 'input',
     ru: {
       lowercase: '1',
-      uppercase: '!',
-      capsLower: '1',
-      capsUpper: '!'
+      uppercase: '!'
     },
     en: {
       lowercase: '1',
-      uppercase: '!',
-      capsLower: '1',
-      capsUpper: '!'
+      uppercase: '!'
     }
   },
   {
@@ -45,15 +37,11 @@ const keys = [
     type: 'input',
     ru: {
       lowercase: '2',
-      uppercase: '"',
-      capsLower: '2',
-      capsUpper: '"'
+      uppercase: '"'
     },
     en: {
       lowercase: '2',
-      uppercase: '@',
-      capsLower: '2',
-      capsUpper: '@'
+      uppercase: '@'
     }
   },
   {
@@ -62,15 +50,11 @@ const keys = [
     type: 'input',
     ru: {
       lowercase: '3',
-      uppercase: '№',
-      capsLower: '3',
-      capsUpper: '№'
+      uppercase: '№'
     },
     en: {
       lowercase: '3',
-      uppercase: '#',
-      capsLower: '3',
-      capsUpper: '#'
+      uppercase: '#'
     }
   },
   {
@@ -79,15 +63,11 @@ const keys = [
     type: 'input',
     ru: {
       lowercase: '4',
-      uppercase: ';',
-      capsLower: '4',
-      capsUpper: ';'
+      uppercase: ';'
     },
     en: {
       lowercase: '4',
-      uppercase: '$',
-      capsLower: '4',
-      capsUpper: '$'
+      uppercase: '$'
     }
   },
   {
@@ -96,15 +76,11 @@ const keys = [
     type: 'input',
     ru: {
       lowercase: '5',
-      uppercase: '%',
-      capsLower: '5',
-      capsUpper: '%'
+      uppercase: '%'
     },
     en: {
       lowercase: '5',
-      uppercase: '%',
-      capsLower: '5',
-      capsUpper: '%'
+      uppercase: '%'
     }
   },
   {
@@ -113,15 +89,11 @@ const keys = [
     type: 'input',
     ru: {
       lowercase: '6',
-      uppercase: ':',
-      capsLower: '6',
-      capsUpper: ':'
+      uppercase: ':'
     },
     en: {
       lowercase: '6',
-      uppercase: '^',
-      capsLower: '6',
-      capsUpper: '^'
+      uppercase: '^'
     }
   },
   {
@@ -130,15 +102,11 @@ const keys = [
     type: 'input',
     ru: {
       lowercase: '7',
-      uppercase: '?',
-      capsLower: '7',
-      capsUpper: '?'
+      uppercase: '?'
     },
     en: {
       lowercase: '7',
-      uppercase: '&',
-      capsLower: '7',
-      capsUpper: '&'
+      uppercase: '&'
     }
   },
   {
@@ -147,15 +115,11 @@ const keys = [
     type: 'input',
     ru: {
       lowercase: '8',
-      uppercase: '*',
-      capsLower: '8',
-      capsUpper: '*'
+      uppercase: '*'
     },
     en: {
       lowercase: '8',
-      uppercase: '*',
-      capsLower: '8',
-      capsUpper: '*'
+      uppercase: '*'
     }
   },
   {
@@ -164,15 +128,11 @@ const keys = [
     type: 'input',
     ru: {
       lowercase: '9',
-      uppercase: '(',
-      capsLower: '9',
-      capsUpper: '('
+      uppercase: '('
     },
     en: {
       lowercase: '9',
-      uppercase: '(',
-      capsLower: '9',
-      capsUpper: '('
+      uppercase: '('
     }
   },
   {
@@ -181,15 +141,11 @@ const keys = [
     type: 'input',
     ru: {
       lowercase: '0',
-      uppercase: ')',
-      capsLower: '0',
-      capsUpper: ')'
+      uppercase: ')'
     },
     en: {
       lowercase: '0',
-      uppercase: ')',
-      capsLower: '0',
-      capsUpper: ')'
+      uppercase: ')'
     }
   },
   {
@@ -198,15 +154,11 @@ const keys = [
     type: 'input',
     ru: {
       lowercase: '-',
-      uppercase: '_',
-      capsLower: '-',
-      capsUpper: '_'
+      uppercase: '_'
     },
     en: {
       lowercase: '-',
-      uppercase: '_',
-      capsLower: '-',
-      capsUpper: '_'
+      uppercase: '_'
     }
   },
   {
@@ -215,15 +167,11 @@ const keys = [
     type: 'input',
     ru: {
       lowercase: '=',
-      uppercase: '+',
-      capsLower: '=',
-      capsUpper: '+'
+      uppercase: '+'
     },
     en: {
       lowercase: '=',
-      uppercase: '+',
-      capsLower: '=',
-      capsUpper: '+'
+      uppercase: '+'
     }
   },
   {
@@ -232,15 +180,11 @@ const keys = [
     type: 'service',
     ru: {
       lowercase: '',
-      uppercase: '',
-      capsLower: '',
-      capsUpper: ''
+      uppercase: ''
     },
     en: {
       lowercase: '',
-      uppercase: '',
-      capsLower: '',
-      capsUpper: ''
+      uppercase: ''
     }
   },
   {
@@ -249,15 +193,11 @@ const keys = [
     type: 'service',
     ru: {
       lowercase: 'Tab',
-      uppercase: 'Tab',
-      capsLower: 'Tab',
-      capsUpper: 'Tab'
+      uppercase: 'Tab'
     },
     en: {
       lowercase: 'Tab',
-      uppercase: 'Tab',
-      capsLower: 'Tab',
-      capsUpper: 'Tab'
+      uppercase: 'Tab'
     }
   },
   {
@@ -266,15 +206,11 @@ const keys = [
     type: 'input',
     ru: {
       lowercase: 'й',
-      uppercase: 'Й',
-      capsLower: 'Й',
-      capsUpper: 'й'
+      uppercase: 'Й'
     },
     en: {
       lowercase: 'q',
-      uppercase: 'Q',
-      capsLower: 'Q',
-      capsUpper: 'q'
+      uppercase: 'Q'
     }
   },
   {
@@ -283,15 +219,11 @@ const keys = [
     type: 'input',
     ru: {
       lowercase: 'ц',
-      uppercase: 'Ц',
-      capsLower: 'Ц',
-      capsUpper: 'ц'
+      uppercase: 'Ц'
     },
     en: {
       lowercase: 'w',
-      uppercase: 'W',
-      capsLower: 'W',
-      capsUpper: 'w'
+      uppercase: 'W'
     }
   },
   {
@@ -300,15 +232,11 @@ const keys = [
     type: 'input',
     ru: {
       lowercase: 'у',
-      uppercase: 'У',
-      capsLower: 'У',
-      capsUpper: 'у'
+      uppercase: 'У'
     },
     en: {
       lowercase: 'e',
-      uppercase: 'E',
-      capsLower: 'E',
-      capsUpper: 'e'
+      uppercase: 'E'
     }
   },
   {
@@ -317,15 +245,11 @@ const keys = [
     type: 'input',
     ru: {
       lowercase: 'к',
-      uppercase: 'К',
-      capsLower: 'К',
-      capsUpper: 'к'
+      uppercase: 'К'
     },
     en: {
       lowercase: 'r',
-      uppercase: 'R',
-      capsLower: 'R',
-      capsUpper: 'r'
+      uppercase: 'R'
     }
   },
   {
@@ -334,15 +258,11 @@ const keys = [
     type: 'input',
     ru: {
       lowercase: 'е',
-      uppercase: 'Е',
-      capsLower: 'Е',
-      capsUpper: 'е'
+      uppercase: 'Е'
     },
     en: {
       lowercase: 't',
-      uppercase: 'T',
-      capsLower: 'T',
-      capsUpper: 't'
+      uppercase: 'T'
     }
   },
   {
@@ -351,15 +271,11 @@ const keys = [
     type: 'input',
     ru: {
       lowercase: 'н',
-      uppercase: 'Н',
-      capsLower: 'Н',
-      capsUpper: 'н'
+      uppercase: 'Н'
     },
     en: {
       lowercase: 'y',
-      uppercase: 'Y',
-      capsLower: 'Y',
-      capsUpper: 'y'
+      uppercase: 'Y'
     }
   },
   {
@@ -368,15 +284,11 @@ const keys = [
     type: 'input',
     ru: {
       lowercase: 'г',
-      uppercase: 'Г',
-      capsLower: 'Г',
-      capsUpper: 'г'
+      uppercase: 'Г'
     },
     en: {
       lowercase: 'u',
-      uppercase: 'U',
-      capsLower: 'U',
-      capsUpper: 'u'
+      uppercase: 'U'
     }
   },
   {
@@ -385,15 +297,11 @@ const keys = [
     type: 'input',
     ru: {
       lowercase: 'ш',
-      uppercase: 'Ш',
-      capsLower: 'Ш',
-      capsUpper: 'ш'
+      uppercase: 'Ш'
     },
     en: {
       lowercase: 'i',
-      uppercase: 'I',
-      capsLower: 'I',
-      capsUpper: 'i'
+      uppercase: 'I'
     }
   },
   {
@@ -402,15 +310,11 @@ const keys = [
     type: 'input',
     ru: {
       lowercase: 'щ',
-      uppercase: 'Щ',
-      capsLower: 'Щ',
-      capsUpper: 'щ'
+      uppercase: 'Щ'
     },
     en: {
       lowercase: 'o',
-      uppercase: 'O',
-      capsLower: 'O',
-      capsUpper: 'o'
+      uppercase: 'O'
     }
   },
   {
@@ -419,15 +323,11 @@ const keys = [
     type: 'input',
     ru: {
       lowercase: 'з',
-      uppercase: 'З',
-      capsLower: 'З',
-      capsUpper: 'з'
+      uppercase: 'З'
     },
     en: {
       lowercase: 'p',
-      uppercase: 'P',
-      capsLower: 'P',
-      capsUpper: 'p'
+      uppercase: 'P'
     }
   },
   {
@@ -436,15 +336,11 @@ const keys = [
     type: 'input',
     ru: {
       lowercase: 'х',
-      uppercase: 'Х',
-      capsLower: 'Х',
-      capsUpper: 'х'
+      uppercase: 'Х'
     },
     en: {
       lowercase: '[',
-      uppercase: '{',
-      capsLower: '[',
-      capsUpper: '{'
+      uppercase: '{'
     }
   },
   {
@@ -453,15 +349,11 @@ const keys = [
     type: 'input',
     ru: {
       lowercase: 'ъ',
-      uppercase: 'Ъ',
-      capsLower: 'Ъ',
-      capsUpper: 'ъ'
+      uppercase: 'Ъ'
     },
     en: {
       lowercase: ']',
-      uppercase: '}',
-      capsLower: ']',
-      capsUpper: '}'
+      uppercase: '}'
     }
   },
   {
@@ -470,15 +362,11 @@ const keys = [
     type: 'input',
     ru: {
       lowercase: '\\',
-      uppercase: '|',
-      capsLower: '\\',
-      capsUpper: '|'
+      uppercase: '|'
     },
     en: {
       lowercase: '\\',
-      uppercase: '|',
-      capsLower: '\\',
-      capsUpper: '|'
+      uppercase: '|'
     }
   },
   {
@@ -487,15 +375,11 @@ const keys = [
     type: 'service',
     ru: {
       lowercase: 'Del',
-      uppercase: 'Del',
-      capsLower: 'Del',
-      capsUpper: 'Del'
+      uppercase: 'Del'
     },
     en: {
       lowercase: 'Del',
-      uppercase: 'Del',
-      capsLower: 'Del',
-      capsUpper: 'Del'
+      uppercase: 'Del'
     }
   },
   {
@@ -504,15 +388,11 @@ const keys = [
     type: 'service',
     ru: {
       lowercase: 'CapsLock',
-      uppercase: 'CapsLock',
-      capsLower: 'CapsLock',
-      capsUpper: 'CapsLock'
+      uppercase: 'CapsLock'
     },
     en: {
       lowercase: 'CapsLock',
-      uppercase: 'CapsLock',
-      capsLower: 'CapsLock',
-      capsUpper: 'CapsLock'
+      uppercase: 'CapsLock'
     }
   },
   {
@@ -521,15 +401,11 @@ const keys = [
     type: 'input',
     ru: {
       lowercase: 'ф',
-      uppercase: 'Ф',
-      capsLower: 'Ф',
-      capsUpper: 'ф'
+      uppercase: 'Ф'
     },
     en: {
       lowercase: 'a',
-      uppercase: 'A',
-      capsLower: 'A',
-      capsUpper: 'a'
+      uppercase: 'A'
     }
   },
   {
@@ -538,15 +414,11 @@ const keys = [
     type: 'input',
     ru: {
       lowercase: 'ы',
-      uppercase: 'Ы',
-      capsLower: 'Ы',
-      capsUpper: 'ы'
+      uppercase: 'Ы'
     },
     en: {
       lowercase: 's',
-      uppercase: 'S',
-      capsLower: 'S',
-      capsUpper: 's'
+      uppercase: 'S'
     }
   },
   {
@@ -555,15 +427,11 @@ const keys = [
     type: 'input',
     ru: {
       lowercase: 'в',
-      uppercase: 'В',
-      capsLower: 'В',
-      capsUpper: 'в'
+      uppercase: 'В'
     },
     en: {
       lowercase: 'd',
-      uppercase: 'D',
-      capsLower: 'D',
-      capsUpper: 'd'
+      uppercase: 'D'
     }
   },
   {
@@ -572,15 +440,11 @@ const keys = [
     type: 'input',
     ru: {
       lowercase: 'а',
-      uppercase: 'А',
-      capsLower: 'А',
-      capsUpper: 'а'
+      uppercase: 'А'
     },
     en: {
       lowercase: 'f',
-      uppercase: 'F',
-      capsLower: 'F',
-      capsUpper: 'f'
+      uppercase: 'F'
     }
   },
   {
@@ -589,15 +453,11 @@ const keys = [
     type: 'input',
     ru: {
       lowercase: 'п',
-      uppercase: 'П',
-      capsLower: 'П',
-      capsUpper: 'п'
+      uppercase: 'П'
     },
     en: {
       lowercase: 'g',
-      uppercase: 'G',
-      capsLower: 'G',
-      capsUpper: 'g'
+      uppercase: 'G'
     }
   },
   {
@@ -606,15 +466,11 @@ const keys = [
     type: 'input',
     ru: {
       lowercase: 'р',
-      uppercase: 'Р',
-      capsLower: 'Р',
-      capsUpper: 'р'
+      uppercase: 'Р'
     },
     en: {
       lowercase: 'h',
-      uppercase: 'H',
-      capsLower: 'H',
-      capsUpper: 'h'
+      uppercase: 'H'
     }
   },
   {
@@ -623,15 +479,11 @@ const keys = [
     type: 'input',
     ru: {
       lowercase: 'о',
-      uppercase: 'О',
-      capsLower: 'О',
-      capsUpper: 'о'
+      uppercase: 'О'
     },
     en: {
       lowercase: 'j',
-      uppercase: 'J',
-      capsLower: 'J',
-      capsUpper: 'j'
+      uppercase: 'J'
     }
   },
   {
@@ -640,15 +492,11 @@ const keys = [
     type: 'input',
     ru: {
       lowercase: 'л',
-      uppercase: 'Л',
-      capsLower: 'Л',
-      capsUpper: 'л'
+      uppercase: 'Л'
     },
     en: {
       lowercase: 'j',
-      uppercase: 'J',
-      capsLower: 'J',
-      capsUpper: 'j'
+      uppercase: 'J'
     }
   },
   {
@@ -657,15 +505,11 @@ const keys = [
     type: 'input',
     ru: {
       lowercase: 'д',
-      uppercase: 'Д',
-      capsLower: 'Д',
-      capsUpper: 'д'
+      uppercase: 'Д'
     },
     en: {
       lowercase: 'l',
-      uppercase: 'L',
-      capsLower: 'L',
-      capsUpper: 'l'
+      uppercase: 'L'
     }
   },
   {
@@ -674,15 +518,11 @@ const keys = [
     type: 'input',
     ru: {
       lowercase: 'ж',
-      uppercase: 'Ж',
-      capsLower: 'Ж',
-      capsUpper: 'ж'
+      uppercase: 'Ж'
     },
     en: {
       lowercase: ';',
-      uppercase: ':',
-      capsLower: ';',
-      capsUpper: ':'
+      uppercase: ':'
     }
   },
   {
@@ -691,15 +531,11 @@ const keys = [
     type: 'input',
     ru: {
       lowercase: 'э',
-      uppercase: 'Э',
-      capsLower: 'Э',
-      capsUpper: 'э'
+      uppercase: 'Э'
     },
     en: {
       lowercase: "'",
-      uppercase: '"',
-      capsLower: "'",
-      capsUpper: '"'
+      uppercase: '"'
     }
   },
   {
@@ -708,15 +544,11 @@ const keys = [
     type: 'service',
     ru: {
       lowercase: 'Enter',
-      uppercase: 'Enter',
-      capsLower: 'Enter',
-      capsUpper: 'Enter'
+      uppercase: 'Enter'
     },
     en: {
       lowercase: 'Enter',
-      uppercase: 'Enter',
-      capsLower: 'Enter',
-      capsUpper: 'Enter'
+      uppercase: 'Enter'
     }
   },
   {
@@ -724,16 +556,12 @@ const keys = [
     event: 'true',
     type: 'service',
     ru: {
-      lowercase: 'Shift',
-      uppercase: 'Shift',
-      capsLower: 'Shift',
-      capsUpper: 'Shift'
+      lowercase: '',
+      uppercase: ''
     },
     en: {
-      lowercase: 'Shift',
-      uppercase: 'Shift',
-      capsLower: 'Shift',
-      capsUpper: 'Shift'
+      lowercase: '',
+      uppercase: ''
     }
   },
   {
@@ -742,15 +570,11 @@ const keys = [
     type: 'input',
     ru: {
       lowercase: 'я',
-      uppercase: 'Я',
-      capsLower: 'Я',
-      capsUpper: 'я'
+      uppercase: 'Я'
     },
     en: {
       lowercase: 'z',
-      uppercase: 'Z',
-      capsLower: 'Z',
-      capsUpper: 'z'
+      uppercase: 'Z'
     }
   },
   {
@@ -759,15 +583,11 @@ const keys = [
     type: 'input',
     ru: {
       lowercase: 'ч',
-      uppercase: 'Ч',
-      capsLower: 'Ч',
-      capsUpper: 'ч'
+      uppercase: 'Ч'
     },
     en: {
       lowercase: 'x',
-      uppercase: 'X',
-      capsLower: 'X',
-      capsUpper: 'x'
+      uppercase: 'X'
     }
   },
   {
@@ -776,15 +596,11 @@ const keys = [
     type: 'input',
     ru: {
       lowercase: 'с',
-      uppercase: 'С',
-      capsLower: 'С',
-      capsUpper: 'с'
+      uppercase: 'С'
     },
     en: {
       lowercase: 'c',
-      uppercase: 'C',
-      capsLower: 'C',
-      capsUpper: 'c'
+      uppercase: 'C'
     }
   },
   {
@@ -793,15 +609,11 @@ const keys = [
     type: 'input',
     ru: {
       lowercase: 'м',
-      uppercase: 'М',
-      capsLower: 'М',
-      capsUpper: 'м'
+      uppercase: 'М'
     },
     en: {
       lowercase: 'v',
-      uppercase: 'V',
-      capsLower: 'V',
-      capsUpper: 'v'
+      uppercase: 'V'
     }
   },
   {
@@ -810,15 +622,11 @@ const keys = [
     type: 'input',
     ru: {
       lowercase: 'и',
-      uppercase: 'И',
-      capsLower: 'И',
-      capsUpper: 'и'
+      uppercase: 'И'
     },
     en: {
       lowercase: 'b',
-      uppercase: 'B',
-      capsLower: 'B',
-      capsUpper: 'b'
+      uppercase: 'B'
     }
   },
   {
@@ -827,15 +635,11 @@ const keys = [
     type: 'input',
     ru: {
       lowercase: 'т',
-      uppercase: 'Т',
-      capsLower: 'Т',
-      capsUpper: 'т'
+      uppercase: 'Т'
     },
     en: {
       lowercase: 'n',
-      uppercase: 'N',
-      capsLower: 'N',
-      capsUpper: 'n'
+      uppercase: 'N'
     }
   },
   {
@@ -844,15 +648,11 @@ const keys = [
     type: 'input',
     ru: {
       lowercase: 'ь',
-      uppercase: 'Ь',
-      capsLower: 'Ь',
-      capsUpper: 'ь'
+      uppercase: 'Ь'
     },
     en: {
       lowercase: 'm',
-      uppercase: 'M',
-      capsLower: 'M',
-      capsUpper: 'm'
+      uppercase: 'M'
     }
   },
   {
@@ -861,15 +661,11 @@ const keys = [
     type: 'input',
     ru: {
       lowercase: 'б',
-      uppercase: 'Б',
-      capsLower: 'Б',
-      capsUpper: 'б'
+      uppercase: 'Б'
     },
     en: {
       lowercase: ',',
-      uppercase: '<',
-      capsLower: ',',
-      capsUpper: '<'
+      uppercase: '<'
     }
   },
   {
@@ -878,15 +674,11 @@ const keys = [
     type: 'input',
     ru: {
       lowercase: 'ю',
-      uppercase: 'Ю',
-      capsLower: 'Ю',
-      capsUpper: 'ю'
+      uppercase: 'Ю'
     },
     en: {
       lowercase: '.',
-      uppercase: '>',
-      capsLower: '.',
-      capsUpper: '>'
+      uppercase: '>'
     }
   },
   {
@@ -895,15 +687,11 @@ const keys = [
     type: 'input',
     ru: {
       lowercase: '.',
-      uppercase: ',',
-      capsLower: '.',
-      capsUpper: ','
+      uppercase: ','
     },
     en: {
       lowercase: '/',
-      uppercase: '?',
-      capsLower: '/',
-      capsUpper: '?'
+      uppercase: '?'
     }
   },
   {
@@ -911,16 +699,12 @@ const keys = [
     event: 'true',
     type: 'nav',
     ru: {
-      lowercase: '',
-      uppercase: '',
-      capsLower: '',
-      capsUpper: ''
+      lowercase: '&#5123;',
+      uppercase: '&#5123;'
     },
     en: {
-      lowercase: '',
-      uppercase: '',
-      capsLower: '',
-      capsUpper: ''
+      lowercase: '&#5123;',
+      uppercase: '&#5123;'
     }
   },
   {
@@ -928,16 +712,12 @@ const keys = [
     event: 'true',
     type: 'service',
     ru: {
-      lowercase: 'Shift',
-      uppercase: 'Shift',
-      capsLower: 'Shift',
-      capsUpper: 'Shift'
+      lowercase: '',
+      uppercase: ''
     },
     en: {
-      lowercase: 'Shift',
-      uppercase: 'Shift',
-      capsLower: 'Shift',
-      capsUpper: 'Shift'
+      lowercase: '',
+      uppercase: ''
     }
   },
   {
@@ -945,16 +725,12 @@ const keys = [
     event: 'true',
     type: 'service',
     ru: {
-      lowercase: 'Ctrl',
-      uppercase: 'Ctrl',
-      capsLower: 'Ctrl',
-      capsUpper: 'Ctrl'
+      lowercase: '',
+      uppercase: ''
     },
     en: {
-      lowercase: 'Ctrl',
-      uppercase: 'Ctrl',
-      capsLower: 'Ctrl',
-      capsUpper: 'Ctrl'
+      lowercase: '',
+      uppercase: ''
     }
   },
   {
@@ -963,15 +739,11 @@ const keys = [
     type: 'service',
     ru: {
       lowercase: 'Win',
-      uppercase: 'Win',
-      capsLower: 'Win',
-      capsUpper: 'Win'
+      uppercase: 'Win'
     },
     en: {
       lowercase: 'Win',
-      uppercase: 'Win',
-      capsLower: 'Win',
-      capsUpper: 'Win'
+      uppercase: 'Win'
     }
   },
   {
@@ -979,16 +751,12 @@ const keys = [
     event: 'true',
     type: 'service',
     ru: {
-      lowercase: 'Alt',
-      uppercase: 'Alt',
-      capsLower: 'Alt',
-      capsUpper: 'Alt'
+      lowercase: '',
+      uppercase: ''
     },
     en: {
-      lowercase: 'Alt',
-      uppercase: 'Alt',
-      capsLower: 'Alt',
-      capsUpper: 'Alt'
+      lowercase: '',
+      uppercase: ''
     }
   },
   {
@@ -997,15 +765,11 @@ const keys = [
     type: 'input',
     ru: {
       lowercase: ' ',
-      uppercase: ' ',
-      capsLower: ' ',
-      capsUpper: ' '
+      uppercase: ' '
     },
     en: {
       lowercase: ' ',
-      uppercase: ' ',
-      capsLower: ' ',
-      capsUpper: ' '
+      uppercase: ' '
     }
   },
   {
@@ -1013,16 +777,12 @@ const keys = [
     event: 'true',
     type: 'service',
     ru: {
-      lowercase: 'Alt',
-      uppercase: 'Alt',
-      capsLower: 'Alt',
-      capsUpper: 'Alt'
+      lowercase: '',
+      uppercase: ''
     },
     en: {
-      lowercase: 'Alt',
-      uppercase: 'Alt',
-      capsLower: 'Alt',
-      capsUpper: 'Alt'
+      lowercase: '',
+      uppercase: ''
     }
   },
   {
@@ -1030,16 +790,12 @@ const keys = [
     event: 'true',
     type: 'nav',
     ru: {
-      lowercase: '',
-      uppercase: '',
-      capsLower: '',
-      capsUpper: ''
+      lowercase: '&#5130;',
+      uppercase: '&#5130;'
     },
     en: {
-      lowercase: '',
-      uppercase: '',
-      capsLower: '',
-      capsUpper: ''
+      lowercase: '&#5130;',
+      uppercase: '&#5130;'
     }
   },
   {
@@ -1047,16 +803,12 @@ const keys = [
     event: 'true',
     type: 'nav',
     ru: {
-      lowercase: '',
-      uppercase: '',
-      capsLower: '',
-      capsUpper: ''
+      lowercase: '&#5121;',
+      uppercase: '&#5121;'
     },
     en: {
-      lowercase: '',
-      uppercase: '',
-      capsLower: '',
-      capsUpper: ''
+      lowercase: '&#5121;',
+      uppercase: '&#5121;'
     }
   },
   {
@@ -1064,16 +816,12 @@ const keys = [
     event: 'true',
     type: 'nav',
     ru: {
-      lowercase: '',
-      uppercase: '',
-      capsLower: '',
-      capsUpper: ''
+      lowercase: '&#5125;',
+      uppercase: '&#5125;'
     },
     en: {
-      lowercase: '',
-      uppercase: '',
-      capsLower: '',
-      capsUpper: ''
+      lowercase: '&#5125;',
+      uppercase: '&#5125;'
     }
   },
   {
@@ -1082,15 +830,11 @@ const keys = [
     type: 'service',
     ru: {
       lowercase: 'Ctrl',
-      uppercase: 'Ctrl',
-      capsLower: 'Ctrl',
-      capsUpper: 'Ctrl'
+      uppercase: 'Ctrl'
     },
     en: {
       lowercase: 'Ctrl',
-      uppercase: 'Ctrl',
-      capsLower: 'Ctrl',
-      capsUpper: 'Ctrl'
+      uppercase: 'Ctrl'
     }
   }
 ]

@@ -2,6 +2,10 @@
 import '../styles/normalize.scss'
 import '../styles/style.sass'
 import keys from './keys'
+import getCaretPos from './caretPos'
+import cookies from './cookies'
+
+const { setCookieC, getCookieC } = cookies
 
 // function create elements
 function createSomeElement (container, element, className, id) {
@@ -25,6 +29,9 @@ const textarea = document.querySelector('.textarea')
 textarea.placeholder = 'Введите текст'
 textarea.setAttribute('rows', '10')
 textarea.setAttribute('cols', '30')
+textarea.addEventListener('change', (e) => {
+  getCaretPos(textarea)
+})
 
 createSomeElement(wrapper, 'div', 'keyboard')
 const keyboard = document.querySelector('.keyboard')
@@ -51,8 +58,25 @@ keys.forEach(key => {
     </div>
   </div>`
 })
-
 keyboard.innerHTML = keysInner
+
+// set language from cookies
+let keyboardLanguage = ''
+if (getCookieC('keyboard_language') === '') {
+  keyboardLanguage = 'en'
+  setCookieC('keyboard_language', 'en', 1)
+} else {
+  keyboardLanguage = getCookieC('keyboard_language')
+}
+document.querySelectorAll('.keyboard__key').forEach(item => {
+  if (keyboardLanguage === 'ru') {
+    item.querySelector('.ru').classList.remove('hide')
+    item.querySelector('.en').classList.add('hide')
+  } else {
+    item.querySelector('.ru').classList.add('hide')
+    item.querySelector('.en').classList.remove('hide')
+  }
+})
 
 // keyboard Shortcuts for switch language
 const keyboardShortcuts = (f, ...keys) => {
@@ -67,14 +91,40 @@ const keyboardShortcuts = (f, ...keys) => {
       }
     }
 
+    f(pressKey)
     pressKey.clear()
-    f()
   })
 
   document.addEventListener('keyup', (e) => {
     pressKey.delete(e.code)
   })
 }
+
+const items = document.querySelectorAll('.keyboard__key')
+keyboardShortcuts(
+  (pressKey) => {
+    if (
+      Array.from(pressKey).indexOf('ShiftLeft') !== -1 &&
+      Array.from(pressKey).indexOf('AltLeft') !== -1
+    ) {
+      document.querySelectorAll('.keyboard__key').forEach(item => {
+        item.querySelector('.ru').classList.toggle('hide')
+        item.querySelector('.en').classList.toggle('hide')
+      })
+      keyboardLanguage = (document.querySelector('.keyboard__key .ru').classList.contains('hide')) ? 'en' : 'ru'
+      setCookieC('keyboard_language', keyboardLanguage, 1)
+    }
+  },
+  'AltLeft',
+  'ShiftLeft'
+)
+
+textarea.addEventListener('focus', function (e) {
+  this.select()
+  const startPosition = this.selectionStart
+  const endPosition = this.selectionEnd
+  console.log(startPosition, endPosition)
+})
 
 // caps
 // backspace
@@ -90,7 +140,6 @@ const activeKey = (item) => {
   }, 200)
 }
 
-const items = document.querySelectorAll('.keyboard__key')
 items.forEach(item => {
   // eventlistener for keyboard
   item.addEventListener('click', (e) => {
@@ -109,27 +158,9 @@ document.addEventListener('keydown', (e) => {
   const dataAtr = item.dataset.keys
 
   if (e.code === dataAtr) {
-    console.log(1)
+    console.log(e.code)
     textarea.textContent += item.querySelector('.keyboard__lang.en > .lowercase').textContent
     activeKey(item)
-    if (dataAtr === 'AltLeft') {
-      // switch language
-      keyboardShortcuts(
-        () => {
-          const ruKeys = document.querySelectorAll('.ru')
-          const enKeys = document.querySelectorAll('.en')
-
-          for (let i = 0; i < ruKeys.length; i++) {
-            for (let j = 0; j < enKeys.length; j++) {
-              ruKeys[i].classList.remove('hide')
-              enKeys[j].classList.add('hide')
-            }
-          }
-        },
-        'AltLeft',
-        'ShiftLeft'
-      )
-    }
   }
 })
 

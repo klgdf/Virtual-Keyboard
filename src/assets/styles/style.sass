@@ -61,31 +61,6 @@
       width: 80px
     &.ControlRight
       width: 55px
-    &.ArrowLeft, &.ArrowRight, &.ArrowDown, &.ArrowUp
-      &::after
-        content: ''
-        display: block
-        border: 8px solid transparent
-        border-right: 8px solid black
-    &.ArrowLeft
-      &::after
-        position: relative
-        left: -4px
-    &.ArrowRight
-      &::after
-        transform: rotate(180deg)
-        position: relative
-        right: -4px
-    &.ArrowDown
-      &::after
-        transform: rotate(-90deg)
-        position: relative
-        bottom: -4px
-    &.ArrowUp
-      &::after
-        transform: rotate(90deg)
-        position: relative
-        top: -4px
   &__lang
 
 .hide
