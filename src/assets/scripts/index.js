@@ -7,6 +7,7 @@ import cookies from './cookies'
 const { setCookieC, getCookieC } = cookies
 
 console.log('По ошибке засабмитила ссылку на деплой. Вот ссылка на pull request: https://github.com/klgdf/Virtual-Keyboard/pull/1')
+
 // function create elements
 function createSomeElement (container, element, className, id) {
   const el = document.createElement(element)
@@ -168,14 +169,13 @@ document.addEventListener('keyup', (e) => {
     textarea.textContent += item.querySelector('.keyboard__lang.current-lang > .lowercase').textContent
     activeKey(item)
   } else if (e.code === 'CapsLock') {
-    console.log('1')
     item.classList.toggle('active')
   }
 
   removeABC(e.code)
 })
 
-let registr = ''
+let registr
 const lowercases = document.querySelectorAll('.lowercase')
 const uppercases = document.querySelectorAll('.uppercase')
 const caps = document.querySelector('.CapsLock')
@@ -185,18 +185,17 @@ if (getCookieC('registr') === '') {
   caps.classList.remove('active')
 } else {
   // это работает, но eslint почему-то ругается
+  // eslint-disable-next-line no-unused-vars
   registr = 'true'
   caps.classList.add('active')
 }
 
 textarea.addEventListener('keyup', (e) => {
-  console.log('1')
   controlRegistr(e)
 })
 
 const controlRegistr = (e) => {
   if (e.getModifierState('CapsLock') && (e.getModifierState('ShiftLeft') || e.getModifierState('ShiftRight'))) {
-    console.log(1)
     caps.classList.add('active')
     setCookieC('registr', 'true', 1)
     lowercases.forEach(lowercase => {
@@ -206,7 +205,6 @@ const controlRegistr = (e) => {
       uppercase.classList.add('hide')
     })
   } else if (e.getModifierState('CapsLock') && !(e.getModifierState('ShiftLeft') || e.getModifierState('ShiftRight'))) {
-    console.log(2)
     caps.classList.add('active')
     setCookieC('registr', 'true', 1)
     lowercases.forEach(lowercase => {
@@ -216,7 +214,6 @@ const controlRegistr = (e) => {
       uppercase.classList.remove('hide')
     })
   } else if (!e.getModifierState('CapsLock') && !(e.getModifierState('ShiftLeft') || e.getModifierState('ShiftRight'))) {
-    console.log(3)
     caps.classList.remove('active')
     setCookieC('registr', 'false', 1)
     lowercases.forEach(lowercase => {
@@ -226,7 +223,6 @@ const controlRegistr = (e) => {
       uppercase.classList.add('hide')
     })
   } else {
-    console.log(4)
     caps.classList.remove('active')
     setCookieC('registr', 'false', 1)
     lowercases.forEach(lowercase => {
