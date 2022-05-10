@@ -119,20 +119,6 @@ keyboardShortcuts(
   'ShiftLeft'
 )
 
-textarea.addEventListener('focus', function (e) {
-  this.select()
-  const startPosition = this.selectionStart
-  const endPosition = this.selectionEnd
-  console.log(startPosition, endPosition)
-})
-
-// caps
-// backspace
-const backspaceKey = () => {
-  console.log(textarea.textContent)
-  textarea.textContent = textarea.textContent.slice()
-}
-
 const activeKey = (item) => {
   item.classList.add('active')
   setTimeout(() => {
@@ -146,7 +132,19 @@ items.forEach(item => {
     if (e.currentTarget === item) {
       textarea.textContent += item.querySelector('.keyboard__lang.en > .lowercase').textContent
       if (item.classList.contains('Backspace')) {
-        backspaceKey()
+        console.log('1')
+        textarea.focus()
+        document.dispatchEvent(new KeyboardEvent('keydown', {
+          key: 'Backspace',
+          char: 8,
+          ctrlKey: true
+        }))
+
+        document.dispatchEvent(new KeyboardEvent('keyup', {
+          key: 'Backspace',
+          char: 8,
+          ctrlKey: false
+        }))
       }
       activeKey(item)
     }
@@ -154,6 +152,7 @@ items.forEach(item => {
 })
 
 document.addEventListener('keydown', (e) => {
+  console.log(e.code)
   const item = document.querySelector(`.${e.code}`)
   const dataAtr = item.dataset.keys
 

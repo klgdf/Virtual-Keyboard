@@ -149,7 +149,7 @@ const keys = [
     }
   },
   {
-    key: 'NumpadSubtract',
+    key: 'Minus',
     event: 'false',
     type: 'input',
     ru: {
@@ -591,7 +591,7 @@ const keys = [
     }
   },
   {
-    key: 'KeyС',
+    key: 'KeyC',
     event: 'false',
     type: 'input',
     ru: {
@@ -656,7 +656,7 @@ const keys = [
     }
   },
   {
-    key: 'NumpadDecimal',
+    key: 'Comma',
     event: 'false',
     type: 'input',
     ru: {
