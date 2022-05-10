@@ -7,8 +7,6 @@
 const keys = [
   {
     key: 'Backquote',
-    event: 'false',
-    type: 'input',
     ru: {
       lowercase: 'ё',
       uppercase: 'Ё'
@@ -20,8 +18,6 @@ const keys = [
   },
   {
     key: 'Digit1',
-    event: 'false',
-    type: 'input',
     ru: {
       lowercase: '1',
       uppercase: '!'
@@ -33,8 +29,6 @@ const keys = [
   },
   {
     key: 'Digit2',
-    event: 'false',
-    type: 'input',
     ru: {
       lowercase: '2',
       uppercase: '"'
@@ -46,8 +40,6 @@ const keys = [
   },
   {
     key: 'Digit3',
-    event: 'false',
-    type: 'input',
     ru: {
       lowercase: '3',
       uppercase: '№'
@@ -59,8 +51,6 @@ const keys = [
   },
   {
     key: 'Digit4',
-    event: 'false',
-    type: 'input',
     ru: {
       lowercase: '4',
       uppercase: ';'
@@ -72,8 +62,6 @@ const keys = [
   },
   {
     key: 'Digit5',
-    event: 'false',
-    type: 'input',
     ru: {
       lowercase: '5',
       uppercase: '%'
@@ -85,8 +73,6 @@ const keys = [
   },
   {
     key: 'Digit6',
-    event: 'false',
-    type: 'input',
     ru: {
       lowercase: '6',
       uppercase: ':'
@@ -98,8 +84,6 @@ const keys = [
   },
   {
     key: 'Digit7',
-    event: 'false',
-    type: 'input',
     ru: {
       lowercase: '7',
       uppercase: '?'
@@ -111,8 +95,6 @@ const keys = [
   },
   {
     key: 'Digit8',
-    event: 'false',
-    type: 'input',
     ru: {
       lowercase: '8',
       uppercase: '*'
@@ -124,8 +106,6 @@ const keys = [
   },
   {
     key: 'Digit9',
-    event: 'false',
-    type: 'input',
     ru: {
       lowercase: '9',
       uppercase: '('
@@ -137,8 +117,6 @@ const keys = [
   },
   {
     key: 'Digit0',
-    event: 'false',
-    type: 'input',
     ru: {
       lowercase: '0',
       uppercase: ')'
@@ -150,8 +128,6 @@ const keys = [
   },
   {
     key: 'Minus',
-    event: 'false',
-    type: 'input',
     ru: {
       lowercase: '-',
       uppercase: '_'
@@ -163,8 +139,6 @@ const keys = [
   },
   {
     key: 'Equal',
-    event: 'false',
-    type: 'input',
     ru: {
       lowercase: '=',
       uppercase: '+'
@@ -176,8 +150,6 @@ const keys = [
   },
   {
     key: 'Backspace',
-    event: 'true',
-    type: 'service',
     ru: {
       lowercase: '',
       uppercase: ''
@@ -189,21 +161,17 @@ const keys = [
   },
   {
     key: 'Tab',
-    event: 'true',
-    type: 'service',
     ru: {
-      lowercase: 'Tab',
-      uppercase: 'Tab'
+      lowercase: '    ',
+      uppercase: '    '
     },
     en: {
-      lowercase: 'Tab',
-      uppercase: 'Tab'
+      lowercase: '    ',
+      uppercase: '    '
     }
   },
   {
     key: 'KeyQ',
-    event: 'false',
-    type: 'input',
     ru: {
       lowercase: 'й',
       uppercase: 'Й'
@@ -215,8 +183,6 @@ const keys = [
   },
   {
     key: 'KeyW',
-    event: 'false',
-    type: 'input',
     ru: {
       lowercase: 'ц',
       uppercase: 'Ц'
@@ -228,8 +194,6 @@ const keys = [
   },
   {
     key: 'KeyE',
-    event: 'false',
-    type: 'input',
     ru: {
       lowercase: 'у',
       uppercase: 'У'
@@ -241,8 +205,6 @@ const keys = [
   },
   {
     key: 'KeyR',
-    event: 'false',
-    type: 'input',
     ru: {
       lowercase: 'к',
       uppercase: 'К'
@@ -254,8 +216,6 @@ const keys = [
   },
   {
     key: 'KeyT',
-    event: 'false',
-    type: 'input',
     ru: {
       lowercase: 'е',
       uppercase: 'Е'
@@ -267,8 +227,6 @@ const keys = [
   },
   {
     key: 'KeyY',
-    event: 'false',
-    type: 'input',
     ru: {
       lowercase: 'н',
       uppercase: 'Н'
@@ -280,8 +238,6 @@ const keys = [
   },
   {
     key: 'KeyU',
-    event: 'false',
-    type: 'input',
     ru: {
       lowercase: 'г',
       uppercase: 'Г'
@@ -293,8 +249,6 @@ const keys = [
   },
   {
     key: 'KeyI',
-    event: 'false',
-    type: 'input',
     ru: {
       lowercase: 'ш',
       uppercase: 'Ш'
@@ -306,8 +260,6 @@ const keys = [
   },
   {
     key: 'KeyO',
-    event: 'false',
-    type: 'input',
     ru: {
       lowercase: 'щ',
       uppercase: 'Щ'
@@ -319,8 +271,6 @@ const keys = [
   },
   {
     key: 'KeyP',
-    event: 'false',
-    type: 'input',
     ru: {
       lowercase: 'з',
       uppercase: 'З'
@@ -332,8 +282,6 @@ const keys = [
   },
   {
     key: 'BracketLeft',
-    event: 'false',
-    type: 'input',
     ru: {
       lowercase: 'х',
       uppercase: 'Х'
@@ -345,8 +293,6 @@ const keys = [
   },
   {
     key: 'BracketRight',
-    event: 'false',
-    type: 'input',
     ru: {
       lowercase: 'ъ',
       uppercase: 'Ъ'
@@ -358,8 +304,6 @@ const keys = [
   },
   {
     key: 'Backslash',
-    event: 'false',
-    type: 'input',
     ru: {
       lowercase: '\\',
       uppercase: '|'
@@ -371,34 +315,28 @@ const keys = [
   },
   {
     key: 'Delete',
-    event: 'true',
-    type: 'service',
     ru: {
-      lowercase: 'Del',
-      uppercase: 'Del'
+      lowercase: '',
+      uppercase: ''
     },
     en: {
-      lowercase: 'Del',
-      uppercase: 'Del'
+      lowercase: '',
+      uppercase: ''
     }
   },
   {
     key: 'CapsLock',
-    event: 'true',
-    type: 'service',
     ru: {
-      lowercase: 'CapsLock',
-      uppercase: 'CapsLock'
+      lowercase: '',
+      uppercase: ''
     },
     en: {
-      lowercase: 'CapsLock',
-      uppercase: 'CapsLock'
+      lowercase: '',
+      uppercase: ''
     }
   },
   {
     key: 'KeyA',
-    event: 'false',
-    type: 'input',
     ru: {
       lowercase: 'ф',
       uppercase: 'Ф'
@@ -410,8 +348,6 @@ const keys = [
   },
   {
     key: 'KeyS',
-    event: 'false',
-    type: 'input',
     ru: {
       lowercase: 'ы',
       uppercase: 'Ы'
@@ -423,8 +359,6 @@ const keys = [
   },
   {
     key: 'KeyD',
-    event: 'false',
-    type: 'input',
     ru: {
       lowercase: 'в',
       uppercase: 'В'
@@ -436,8 +370,6 @@ const keys = [
   },
   {
     key: 'KeyF',
-    event: 'false',
-    type: 'input',
     ru: {
       lowercase: 'а',
       uppercase: 'А'
@@ -449,8 +381,6 @@ const keys = [
   },
   {
     key: 'KeyG',
-    event: 'false',
-    type: 'input',
     ru: {
       lowercase: 'п',
       uppercase: 'П'
@@ -462,8 +392,6 @@ const keys = [
   },
   {
     key: 'KeyH',
-    event: 'false',
-    type: 'input',
     ru: {
       lowercase: 'р',
       uppercase: 'Р'
@@ -475,8 +403,6 @@ const keys = [
   },
   {
     key: 'KeyJ',
-    event: 'false',
-    type: 'input',
     ru: {
       lowercase: 'о',
       uppercase: 'О'
@@ -488,8 +414,6 @@ const keys = [
   },
   {
     key: 'KeyK',
-    event: 'false',
-    type: 'input',
     ru: {
       lowercase: 'л',
       uppercase: 'Л'
@@ -501,8 +425,6 @@ const keys = [
   },
   {
     key: 'KeyL',
-    event: 'false',
-    type: 'input',
     ru: {
       lowercase: 'д',
       uppercase: 'Д'
@@ -514,8 +436,6 @@ const keys = [
   },
   {
     key: 'Semicolon',
-    event: 'false',
-    type: 'input',
     ru: {
       lowercase: 'ж',
       uppercase: 'Ж'
@@ -527,8 +447,6 @@ const keys = [
   },
   {
     key: 'Quote',
-    event: 'false',
-    type: 'input',
     ru: {
       lowercase: 'э',
       uppercase: 'Э'
@@ -540,21 +458,17 @@ const keys = [
   },
   {
     key: 'Enter',
-    event: 'true',
-    type: 'service',
     ru: {
-      lowercase: 'Enter',
-      uppercase: 'Enter'
+      lowercase: '\n',
+      uppercase: '\n'
     },
     en: {
-      lowercase: 'Enter',
-      uppercase: 'Enter'
+      lowercase: '\n',
+      uppercase: '\n'
     }
   },
   {
     key: 'ShiftLeft',
-    event: 'true',
-    type: 'service',
     ru: {
       lowercase: '',
       uppercase: ''
@@ -566,8 +480,6 @@ const keys = [
   },
   {
     key: 'KeyZ',
-    event: 'false',
-    type: 'input',
     ru: {
       lowercase: 'я',
       uppercase: 'Я'
@@ -579,8 +491,6 @@ const keys = [
   },
   {
     key: 'KeyX',
-    event: 'false',
-    type: 'input',
     ru: {
       lowercase: 'ч',
       uppercase: 'Ч'
@@ -592,8 +502,6 @@ const keys = [
   },
   {
     key: 'KeyC',
-    event: 'false',
-    type: 'input',
     ru: {
       lowercase: 'с',
       uppercase: 'С'
@@ -605,8 +513,6 @@ const keys = [
   },
   {
     key: 'KeyV',
-    event: 'false',
-    type: 'input',
     ru: {
       lowercase: 'м',
       uppercase: 'М'
@@ -618,8 +524,6 @@ const keys = [
   },
   {
     key: 'KeyB',
-    event: 'false',
-    type: 'input',
     ru: {
       lowercase: 'и',
       uppercase: 'И'
@@ -631,8 +535,6 @@ const keys = [
   },
   {
     key: 'KeyN',
-    event: 'false',
-    type: 'input',
     ru: {
       lowercase: 'т',
       uppercase: 'Т'
@@ -644,8 +546,6 @@ const keys = [
   },
   {
     key: 'KeyM',
-    event: 'false',
-    type: 'input',
     ru: {
       lowercase: 'ь',
       uppercase: 'Ь'
@@ -657,8 +557,6 @@ const keys = [
   },
   {
     key: 'Comma',
-    event: 'false',
-    type: 'input',
     ru: {
       lowercase: 'б',
       uppercase: 'Б'
@@ -670,8 +568,6 @@ const keys = [
   },
   {
     key: 'Period',
-    event: 'false',
-    type: 'input',
     ru: {
       lowercase: 'ю',
       uppercase: 'Ю'
@@ -683,8 +579,6 @@ const keys = [
   },
   {
     key: 'Slash',
-    event: 'false',
-    type: 'input',
     ru: {
       lowercase: '.',
       uppercase: ','
@@ -696,8 +590,6 @@ const keys = [
   },
   {
     key: 'ArrowUp',
-    event: 'true',
-    type: 'nav',
     ru: {
       lowercase: '&#5123;',
       uppercase: '&#5123;'
@@ -709,8 +601,6 @@ const keys = [
   },
   {
     key: 'ShiftRight',
-    event: 'true',
-    type: 'service',
     ru: {
       lowercase: '',
       uppercase: ''
@@ -722,8 +612,6 @@ const keys = [
   },
   {
     key: 'ControlLeft',
-    event: 'true',
-    type: 'service',
     ru: {
       lowercase: '',
       uppercase: ''
@@ -735,8 +623,6 @@ const keys = [
   },
   {
     key: 'MetaLeft',
-    event: 'true',
-    type: 'service',
     ru: {
       lowercase: 'Win',
       uppercase: 'Win'
@@ -748,8 +634,6 @@ const keys = [
   },
   {
     key: 'AltLeft',
-    event: 'true',
-    type: 'service',
     ru: {
       lowercase: '',
       uppercase: ''
@@ -761,8 +645,6 @@ const keys = [
   },
   {
     key: 'Space',
-    event: 'false',
-    type: 'input',
     ru: {
       lowercase: ' ',
       uppercase: ' '
@@ -774,8 +656,6 @@ const keys = [
   },
   {
     key: 'AltRight',
-    event: 'true',
-    type: 'service',
     ru: {
       lowercase: '',
       uppercase: ''
@@ -787,8 +667,6 @@ const keys = [
   },
   {
     key: 'ArrowLeft',
-    event: 'true',
-    type: 'nav',
     ru: {
       lowercase: '&#5130;',
       uppercase: '&#5130;'
@@ -800,8 +678,6 @@ const keys = [
   },
   {
     key: 'ArrowDown',
-    event: 'true',
-    type: 'nav',
     ru: {
       lowercase: '&#5121;',
       uppercase: '&#5121;'
@@ -813,8 +689,6 @@ const keys = [
   },
   {
     key: 'ArrowRight',
-    event: 'true',
-    type: 'nav',
     ru: {
       lowercase: '&#5125;',
       uppercase: '&#5125;'
@@ -826,15 +700,13 @@ const keys = [
   },
   {
     key: 'ControlRight',
-    event: 'true',
-    type: 'service',
     ru: {
-      lowercase: 'Ctrl',
-      uppercase: 'Ctrl'
+      lowercase: '',
+      uppercase: ''
     },
     en: {
-      lowercase: 'Ctrl',
-      uppercase: 'Ctrl'
+      lowercase: '',
+      uppercase: ''
     }
   }
 ]

@@ -47,20 +47,34 @@
       opacity: 0.9
     &.Tab
       width: 60px
+      &::after
+        content: 'Tab'
     &.Backspace
       width: 120px
+      &::after
+        content: 'Backspace'
+    &.Delete
+      &::after
+        content: 'Del'
     &.CapsLock
       width: 110px
     &.Enter
       width: 120px
+      &::after
+        content: 'Enter'
     &.ShiftLeft, &.ShiftRight
       width: 115px
+      &::after
+        content: 'Shift'
     &.Space
       width: 385px
     &.ControlLeft
       width: 80px
     &.ControlRight
       width: 55px
+    &.ControlRight, &.ControlLeft
+      &::after
+        content: 'Ctrl'
   &__lang
 
 .hide
