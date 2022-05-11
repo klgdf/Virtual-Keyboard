@@ -122,9 +122,6 @@ keyboardShortcuts(
       })
       keyboardLanguage = (document.querySelector('.keyboard__key .ru').classList.contains('hide')) ? 'en' : 'ru'
       setCookieC('keyboard_language', keyboardLanguage, 1)
-      document.addEventListener('keyup', (e) => {
-        activeKey(ShiftLeft)
-      })
     }
   },
   'AltLeft',
@@ -256,16 +253,17 @@ items.forEach(item => {
   })
 })
 
+document.addEventListener('keydown', (e) => {
+  e.preventDefault()
+})
+
 document.addEventListener('keyup', (e) => {
   const item = document.querySelector(`.${e.code}`)
   const dataAtr = item.dataset.keys
-  e.preventDefault()
-  e.stopPropagation()
   if (e.code === dataAtr && e.code !== 'CapsLock' && e.code !== 'ShiftLeft' && e.code !== 'ShiftRight') {
-    console.log(item)
-    textarea.textContent += item.querySelector('.keyboard__lang.current-lang .current-reg').textContent
+    textarea.value += item.querySelector('.keyboard__lang.current-lang .current-reg').textContent
     activeKey(item)
-  } else if (e.code === 'CapsLock' || e.code === 'ShiftLeft' || e.code === 'ShiftRight') {
+  } else if (e.code === dataAtr && (e.code === 'CapsLock' || e.code === 'ShiftLeft' || e.code === 'ShiftRight')) {
     item.classList.toggle('active')
     controlRegistrPhysical(e)
   }
