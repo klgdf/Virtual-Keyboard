@@ -76,6 +76,14 @@ document.querySelectorAll('.keyboard__key').forEach(item => {
   }
 })
 
+// add class active for keys
+const activeKey = (item) => {
+  item.classList.add('active')
+  setTimeout(() => {
+    item.classList.remove('active')
+  }, 200)
+}
+
 // keyboard Shortcuts for switch language
 const keyboardShortcuts = (f, ...keys) => {
   const pressKey = new Set()
@@ -99,6 +107,7 @@ const keyboardShortcuts = (f, ...keys) => {
 }
 
 const items = document.querySelectorAll('.keyboard__key')
+const ShiftLeft = document.querySelector('.ShiftLeft')
 keyboardShortcuts(
   (pressKey) => {
     if (
@@ -113,19 +122,16 @@ keyboardShortcuts(
       })
       keyboardLanguage = (document.querySelector('.keyboard__key .ru').classList.contains('hide')) ? 'en' : 'ru'
       setCookieC('keyboard_language', keyboardLanguage, 1)
+      document.addEventListener('keyup', (e) => {
+        activeKey(ShiftLeft)
+      })
     }
   },
   'AltLeft',
   'ShiftLeft'
 )
 
-const activeKey = (item) => {
-  item.classList.add('active')
-  setTimeout(() => {
-    item.classList.remove('active')
-  }, 200)
-}
-
+// add functional for Delete and Backspace
 const removeABC = (target) => {
   let startPos = textarea.selectionStart
   const endPos = textarea.selectionEnd
@@ -148,14 +154,87 @@ const removeABC = (target) => {
   textarea.selectionEnd = startPos
 }
 
+// registr text value
+const lowercases = document.querySelectorAll('.lowercase')
+const uppercases = document.querySelectorAll('.uppercase')
+const caps = document.querySelector('.CapsLock')
+const ShiftRight = document.querySelector('.ShiftRight')
+
+const controlRegistrVirtual = (e) => {
+  if (caps.classList.contains('active') && (ShiftLeft.classList.contains('active') || ShiftRight.classList.contains('active'))) {
+    lowercases.forEach(lowercase => {
+      lowercase.classList.remove('hide')
+    })
+    uppercases.forEach(uppercase => {
+      uppercase.classList.add('hide')
+    })
+  } else if (caps.classList.contains('active') && !(ShiftLeft.classList.contains('active') || ShiftRight.classList.contains('active'))) {
+    caps.classList.add('active')
+    lowercases.forEach(lowercase => {
+      lowercase.classList.add('hide')
+    })
+    uppercases.forEach(uppercase => {
+      uppercase.classList.remove('hide')
+    })
+  } else if (!caps.classList.contains('active') && !(ShiftLeft.classList.contains('active') || ShiftRight.classList.contains('active'))) {
+    caps.classList.remove('active')
+    lowercases.forEach(lowercase => {
+      lowercase.classList.remove('hide')
+    })
+    uppercases.forEach(uppercase => {
+      uppercase.classList.add('hide')
+    })
+  } else {
+    caps.classList.remove('active')
+    lowercases.forEach(lowercase => {
+      lowercase.classList.add('hide')
+    })
+    uppercases.forEach(uppercase => {
+      uppercase.classList.remove('hide')
+    })
+  }
+}
+
+const controlRegistrPhysical = (e) => {
+  if (caps.classList.contains('active') && (ShiftLeft.classList.contains('active') || ShiftRight.classList.contains('active'))) {
+    lowercases.forEach(lowercase => {
+      lowercase.classList.remove('hide')
+    })
+    uppercases.forEach(uppercase => {
+      uppercase.classList.add('hide')
+    })
+  } else if (caps.classList.contains('active') && !(ShiftLeft.classList.contains('active') && ShiftRight.classList.contains('active'))) {
+    lowercases.forEach(lowercase => {
+      lowercase.classList.add('hide')
+    })
+    uppercases.forEach(uppercase => {
+      uppercase.classList.remove('hide')
+    })
+  } else if (!caps.classList.contains('active') && (ShiftLeft.classList.contains('active') || ShiftRight.classList.contains('active'))) {
+    lowercases.forEach(lowercase => {
+      lowercase.classList.add('hide')
+    })
+    uppercases.forEach(uppercase => {
+      uppercase.classList.remove('hide')
+    })
+  } else {
+    lowercases.forEach(lowercase => {
+      lowercase.classList.remove('hide')
+    })
+    uppercases.forEach(uppercase => {
+      uppercase.classList.add('hide')
+    })
+  }
+}
+
 items.forEach(item => {
-  // eventlistener for keyboard
   item.addEventListener('click', (e) => {
-    if (e.currentTarget === item && !(e.currentTarget.classList.contains('CapsLock'))) {
-      textarea.value += item.querySelector('.keyboard__lang.current-lang > .lowercase').innerText
+    if (e.currentTarget === item && !(e.currentTarget.classList.contains('CapsLock') || e.currentTarget.classList.contains('ShiftLeft') || e.currentTarget.classList.contains('ShiftRight'))) {
+      textarea.value += item.querySelector('.keyboard__lang.current-lang > .lowercase').textContent
       activeKey(item)
-    } else if (e.currentTarget.classList.contains('CapsLock')) {
+    } else if (e.currentTarget.classList.contains('CapsLock') || e.currentTarget.classList.contains('ShiftLeft') || e.currentTarget.classList.contains('ShiftRight')) {
       e.currentTarget.classList.toggle('active')
+      controlRegistrVirtual()
     }
     removeABC(e.currentTarget.dataset.keys)
   })
@@ -165,75 +244,18 @@ document.addEventListener('keyup', (e) => {
   const item = document.querySelector(`.${e.code}`)
   const dataAtr = item.dataset.keys
 
-  if (e.code === dataAtr && e.code !== 'CapsLock') {
+  if (e.code === dataAtr && e.code !== 'CapsLock' && e.code !== 'ShiftLeft' && e.code !== 'ShiftRight') {
     textarea.textContent += item.querySelector('.keyboard__lang.current-lang > .lowercase').textContent
     activeKey(item)
-  } else if (e.code === 'CapsLock') {
+  } else if (e.code === 'CapsLock' || e.code === 'ShiftLeft' || e.code === 'ShiftRight') {
     item.classList.toggle('active')
+    controlRegistrPhysical(e)
   }
 
   removeABC(e.code)
 })
 
-let registr
-const lowercases = document.querySelectorAll('.lowercase')
-const uppercases = document.querySelectorAll('.uppercase')
-const caps = document.querySelector('.CapsLock')
-if (getCookieC('registr') === '') {
-  registr = 'false'
-  setCookieC('registr', 'false', 1)
-  caps.classList.remove('active')
-} else {
-  // это работает, но eslint почему-то ругается
-  // eslint-disable-next-line no-unused-vars
-  registr = 'true'
-  caps.classList.add('active')
-}
-
-textarea.addEventListener('keyup', (e) => {
-  controlRegistr(e)
-})
-
-const controlRegistr = (e) => {
-  if (e.getModifierState('CapsLock') && (e.getModifierState('ShiftLeft') || e.getModifierState('ShiftRight'))) {
-    caps.classList.add('active')
-    setCookieC('registr', 'true', 1)
-    lowercases.forEach(lowercase => {
-      lowercase.classList.remove('hide')
-    })
-    uppercases.forEach(uppercase => {
-      uppercase.classList.add('hide')
-    })
-  } else if (e.getModifierState('CapsLock') && !(e.getModifierState('ShiftLeft') || e.getModifierState('ShiftRight'))) {
-    caps.classList.add('active')
-    setCookieC('registr', 'true', 1)
-    lowercases.forEach(lowercase => {
-      lowercase.classList.add('hide')
-    })
-    uppercases.forEach(uppercase => {
-      uppercase.classList.remove('hide')
-    })
-  } else if (!e.getModifierState('CapsLock') && !(e.getModifierState('ShiftLeft') || e.getModifierState('ShiftRight'))) {
-    caps.classList.remove('active')
-    setCookieC('registr', 'false', 1)
-    lowercases.forEach(lowercase => {
-      lowercase.classList.remove('hide')
-    })
-    uppercases.forEach(uppercase => {
-      uppercase.classList.add('hide')
-    })
-  } else {
-    caps.classList.remove('active')
-    setCookieC('registr', 'false', 1)
-    lowercases.forEach(lowercase => {
-      lowercase.classList.add('hide')
-    })
-    uppercases.forEach(uppercase => {
-      uppercase.classList.remove('hide')
-    })
-  }
-}
-
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', (e) => {
   textarea.focus()
+  controlRegistrVirtual()
 })

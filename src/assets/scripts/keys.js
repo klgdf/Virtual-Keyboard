@@ -162,12 +162,12 @@ const keys = [
   {
     key: 'Tab',
     ru: {
-      lowercase: '    ',
-      uppercase: '    '
+      lowercase: '\t',
+      uppercase: '\t'
     },
     en: {
-      lowercase: '    ',
-      uppercase: '    '
+      lowercase: '\t',
+      uppercase: '\t'
     }
   },
   {
