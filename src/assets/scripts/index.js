@@ -164,33 +164,41 @@ const controlRegistrVirtual = (e) => {
   if (caps.classList.contains('active') && (ShiftLeft.classList.contains('active') || ShiftRight.classList.contains('active'))) {
     lowercases.forEach(lowercase => {
       lowercase.classList.remove('hide')
+      lowercase.classList.add('current-reg')
     })
     uppercases.forEach(uppercase => {
       uppercase.classList.add('hide')
+      uppercase.classList.remove('current-reg')
     })
   } else if (caps.classList.contains('active') && !(ShiftLeft.classList.contains('active') || ShiftRight.classList.contains('active'))) {
     caps.classList.add('active')
     lowercases.forEach(lowercase => {
       lowercase.classList.add('hide')
+      lowercase.classList.remove('current-reg')
     })
     uppercases.forEach(uppercase => {
       uppercase.classList.remove('hide')
+      uppercase.classList.add('current-reg')
     })
   } else if (!caps.classList.contains('active') && !(ShiftLeft.classList.contains('active') || ShiftRight.classList.contains('active'))) {
     caps.classList.remove('active')
     lowercases.forEach(lowercase => {
       lowercase.classList.remove('hide')
+      lowercase.classList.add('current-reg')
     })
     uppercases.forEach(uppercase => {
       uppercase.classList.add('hide')
+      uppercase.classList.remove('current-reg')
     })
   } else {
     caps.classList.remove('active')
     lowercases.forEach(lowercase => {
       lowercase.classList.add('hide')
+      lowercase.classList.remove('current-reg')
     })
     uppercases.forEach(uppercase => {
       uppercase.classList.remove('hide')
+      uppercase.classList.add('current-reg')
     })
   }
 }
@@ -199,30 +207,38 @@ const controlRegistrPhysical = (e) => {
   if (caps.classList.contains('active') && (ShiftLeft.classList.contains('active') || ShiftRight.classList.contains('active'))) {
     lowercases.forEach(lowercase => {
       lowercase.classList.remove('hide')
+      lowercase.classList.add('current-reg')
     })
     uppercases.forEach(uppercase => {
       uppercase.classList.add('hide')
+      uppercase.classList.remove('current-reg')
     })
   } else if (caps.classList.contains('active') && !(ShiftLeft.classList.contains('active') && ShiftRight.classList.contains('active'))) {
     lowercases.forEach(lowercase => {
       lowercase.classList.add('hide')
+      lowercase.classList.remove('current-reg')
     })
     uppercases.forEach(uppercase => {
       uppercase.classList.remove('hide')
+      uppercase.classList.add('current-reg')
     })
   } else if (!caps.classList.contains('active') && (ShiftLeft.classList.contains('active') || ShiftRight.classList.contains('active'))) {
     lowercases.forEach(lowercase => {
       lowercase.classList.add('hide')
+      lowercase.classList.remove('current-reg')
     })
     uppercases.forEach(uppercase => {
       uppercase.classList.remove('hide')
+      uppercase.classList.add('current-reg')
     })
   } else {
     lowercases.forEach(lowercase => {
       lowercase.classList.remove('hide')
+      lowercase.classList.add('current-reg')
     })
     uppercases.forEach(uppercase => {
       uppercase.classList.add('hide')
+      uppercase.classList.remove('current-reg')
     })
   }
 }
@@ -230,7 +246,7 @@ const controlRegistrPhysical = (e) => {
 items.forEach(item => {
   item.addEventListener('click', (e) => {
     if (e.currentTarget === item && !(e.currentTarget.classList.contains('CapsLock') || e.currentTarget.classList.contains('ShiftLeft') || e.currentTarget.classList.contains('ShiftRight'))) {
-      textarea.value += item.querySelector('.keyboard__lang.current-lang > .lowercase').textContent
+      textarea.value += item.querySelector('.keyboard__lang.current-lang .current-reg').textContent
       activeKey(item)
     } else if (e.currentTarget.classList.contains('CapsLock') || e.currentTarget.classList.contains('ShiftLeft') || e.currentTarget.classList.contains('ShiftRight')) {
       e.currentTarget.classList.toggle('active')
@@ -243,9 +259,11 @@ items.forEach(item => {
 document.addEventListener('keyup', (e) => {
   const item = document.querySelector(`.${e.code}`)
   const dataAtr = item.dataset.keys
-
+  e.preventDefault()
+  e.stopPropagation()
   if (e.code === dataAtr && e.code !== 'CapsLock' && e.code !== 'ShiftLeft' && e.code !== 'ShiftRight') {
-    textarea.textContent += item.querySelector('.keyboard__lang.current-lang > .lowercase').textContent
+    console.log(item)
+    textarea.textContent += item.querySelector('.keyboard__lang.current-lang .current-reg').textContent
     activeKey(item)
   } else if (e.code === 'CapsLock' || e.code === 'ShiftLeft' || e.code === 'ShiftRight') {
     item.classList.toggle('active')
